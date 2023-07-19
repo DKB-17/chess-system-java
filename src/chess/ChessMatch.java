@@ -170,7 +170,7 @@ public class ChessMatch {
 	
 	private boolean testCheckMate(Color color) {
 		if (!testCheck(color)) {
-			return true;
+			return false;
 		}
 		List<Piece> list = piecesOnTheBoard.stream().filter(x -> ((ChessPiece)x).getColor() == color).collect(Collectors.toList());
 		for(Piece p: list) {
